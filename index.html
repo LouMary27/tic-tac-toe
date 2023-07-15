@@ -4,53 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <script src="https://kit.fontawesome.com/10d97e0896.js" crossorigin="anonymous"></script>
-    <title>Tik-Tak-Toe Game</title>
-</head> 
+    <title>Tik-Tac-Toe Game</title>
+</head>
 <body>
- <div class="bg-img"">
+    <script src="script.js" ></script>
+ <div class="bg-img">
+    <div class="container">
+        <div class="tic">TIC-</div>
+        <div class="toc">TAC-</div>
+        <div class="toe">TOE</div>
+      </div>
+    <div class="formborder"></div>
 <div class="form-box">
-    <h1 id="title">TIK-TAK-TOE</h1>
-    <form>
+    <h1 id="title" class="acct"> Create Account </h1>
+    <div>
         <div class="input-group">
         <div class="input-field" id="namefield">
             <i class="fa-solid fa-user"></i>
             <input type="text" placeholder="Name">
         </div>
-        <div class="input-field">
+        <div class="input-field" id="emailfield">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" placeholder="Email">
             </div>
-            <div class="input-field">
+            <div class="input-field" id="passwordfield">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password">
+                <input type="password" " placeholder="Password">
                 </div>
-                <p>Forgot Password <a href="#">Click here!</a></p>
+                <a href="#"><p>Forgot Password?</p></a>
+    </div>
     </div>
     <div class="btn-field">
         <button type="button" id="signupbtn">Sign Up</button>
         <button type="button" id="loginbtn" class="disable">Login</button>
+        <script src="script.js" ></script>
     </div>
-            </form>
 </div>
 </div>
+</form>
 <script>
 let signupbtn = document.getElementById('signupbtn'); 
 let loginbtn = document.getElementById('loginbtn'); 
 let namefield = document.getElementById('namefield'); 
-let title = document.getElementByIds('title'); 
+let title = document.getElementById('title'); 
 
 loginbtn.onclick = function() {
     namefield.style.maxHeight = "0";
-    title.innerHTML = "Login";
+    title.innerHTML = "Login Account";
     signupbtn.classList.add('disable');
     loginbtn.classList.remove('disable');
+
+    /*function auth() {
+    let namefield = document.getElementById ('namefield').value;
+    let emailfield = document.getElementById ('emailfield').value;
+    let passwordfield = document.getElementById('passwordfield').value;
+    if (name=='Mary Lou' && emailfield=='admin@gmail.com' && passwordfield==mary123){
+        window.location.assign = ('ingame.html');
+        alert("Login Successfuly!");
+    }
+    else{
+        alert("Incorrect email or password");
+        return;
+    }
+}*/
 }
-signupbtn.onclick = function() {
-    namefield.style.maxHeight = "0";
-    title.innerHTML = "Sign Up";
-    signupbtn.classList.add('disable');
-    loginbtn.classList.remove('disable');
+signupbtn.onclick = function(){
+    namefield.style.maxHeight = "60px";
+    title.innerHTML = "Create Account";
+    signupbtn.classList.remove('disable');
+    loginbtn.classList.add('disable');
     }
 </script>
 </body>

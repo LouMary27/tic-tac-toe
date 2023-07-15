@@ -1,2 +1,2 @@
-# tik-tak-toe
- Tik-Tak-Toe Game 
+# tik-tac-toe
+ Tik-Tac-Toe Game 
